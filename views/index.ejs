@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>/</title>
+	<meta charset="utf-8">
+	<script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
+	<script type="text/javascript" src="ajax.js"></script>
+</head>
+<body>
+	<% arr.forEach(function(elm){ %>
+		<div>
+			<h1><%= elm.name %></h1>
+			<p><%= elm.body %></p>
+		</div>
+	<% }); %>
+
+	<section>
+		<form method="post", action="http://localhost:3000">
+			<hr>
+			<h3>Add your article</h3>
+			<label for="heading">Heading: </label>
+			<input type="text" name="heading" id="heading" class="heading">
+			<br>
+			<br>
+			<label for="text">Your text: </label>
+			<input type="text" id="text" name="text" class="text">
+			<br>
+			<br>
+			<input type="submit">
+		</form>
+	</section>
+</body>
+</html>
